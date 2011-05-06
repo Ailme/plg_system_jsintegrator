@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install method="upgrade" version="1.5" type="plugin" group="system">
+	<name>System - JS Integrator</name>
+	<author>Alexandr Tumaykin</author>
+	<creationDate>12.10.2010</creationDate>
+    <authorEmail>alexandrtumaykin@gmail.com</authorEmail>
+    <version>1.0.2</version>
+	<description>Подключает JS библиотеки</description>
+	<files>
+		<filename plugin="jsintegrator">jsintegrator.php</filename>
+		<folder>jsintegrator</folder>
+	</files>
+	<languages folder="language">
+	    <language tag="ru-RU">ru-RU.plg_system_jsintegrator.ini</language>
+	</languages>
+	<params addpath="/plugins/system/jsintegrator/elements">
+		<param type="title" default="TITLE_JQUERY_JS" />
+		<param name="jquery_load" type="list" default="2" label="LABEL_JQUERY_LOAD" description="DESC_JQUERY_LOAD">
+	  		<option value="1">PARAM_JQUERY_LOCAL</option>
+	  		<option value="2">PARAM_JQUERY_GOOGLE</option>
+	  	</param>
+		<param name="jquery_where" type="list" default="0" label="LABEL_JQUERY_WHERE" description="DESC_JQUERY_WHERE">
+	  		<option value="0">PARAM_JQUERY_SITE</option>
+	  		<option value="1">PARAM_JQUERY_ADMIN</option>
+	  		<option value="2">PARAM_JQUERY_BOTH</option>
+	  	</param>
+		<param name="jquery_no_conflict_load" type="list" default="1" label="LABEL_JQUERY_NO_CONFLICT_LOAD" description="DESC_JQUERY_NO_CONFLICT_LOAD">
+	  		<option value="0">No</option>
+	  		<option value="1">Yes</option>
+	  	</param>
+		<param type="title" default="TITLE_MOOTOOLS_JS" />
+		<param name="mootools_load" type="list" default="1" label="LABEL_MOOTOOLS_LOAD" description="DESC_MOOTOOLS_LOAD">
+	  		<option value="0">No</option>
+	  		<option value="1">Yes</option>
+	  	</param>
+		<param type="title" default="TITLE_CAPTION_JS" />
+		<param name="caption_load" type="list" default="1" label="LABEL_CAPTION_LOAD" description="DESC_CAPTION_LOAD">
+	  		<option value="0">No</option>
+	  		<option value="1">Yes</option>
+	  	</param>
+	</params>
+</install>
